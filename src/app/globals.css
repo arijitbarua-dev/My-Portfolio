@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #FFFBEA;
+    --bg-surface: #F5F3E9;
+    --bg-surface-alt: #EFECE0;
+    --text-primary: #111111;
+    --text-muted: #555555;
+    --accent-orange: #FF5722;
+    --accent-lime: #83E52B;
+    --border-ink: #111111;
+
+    --font-heading: 'Archivo Black', sans-serif;
+    --font-sans: 'Space Grotesk', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #FFFBEA;
+    color: #111111;
+  }
+
+  body {
+    background-color: #FFFBEA;
+    color: #111111;
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  ::selection {
+    background-color: #83E52B;
+    color: #111111;
+  }
+}
+
+/* Editorial Grain Texture */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Offset Shadows (Brutalist / Editorial Style) */
+.shadow-brutal-sm {
+  box-shadow: 2px 2px 0px #111111;
+}
+
+.shadow-brutal {
+  box-shadow: 4px 4px 0px #111111;
+}
+
+.shadow-brutal-md {
+  box-shadow: 6px 6px 0px #111111;
+}
+
+.shadow-brutal-lg {
+  box-shadow: 8px 8px 0px #111111;
+}
+
+.shadow-brutal-orange {
+  box-shadow: 5px 5px 0px #FF5722;
+}
+
+.shadow-brutal-lime {
+  box-shadow: 5px 5px 0px #83E52B;
+}
+
+/* Hover transition utility */
+.hover-lift {
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #111111;
+}
+
+.hover-lift:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #111111;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFBEA;
+  border-left: 1px solid #111111;
+}
+::-webkit-scrollbar-thumb {
+  background: #111111;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5722;
+}

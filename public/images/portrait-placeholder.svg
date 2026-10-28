@@ -1,0 +1,40 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1000" fill="#F5F3E9"/>
+  <!-- Subtle grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#111111" stroke-width="0.75" stroke-opacity="0.15"/>
+    </pattern>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="2" fill="#FF5722" fill-opacity="0.25"/>
+    </pattern>
+  </defs>
+  
+  <rect width="800" height="1000" fill="url(#grid)" />
+  <rect x="60" y="60" width="680" height="880" fill="none" stroke="#111111" stroke-width="4"/>
+  <rect x="76" y="76" width="648" height="848" fill="#FFFBEA" />
+  
+  <!-- Halftone Accent Block -->
+  <rect x="120" y="140" width="560" height="400" fill="url(#dots)" stroke="#111111" stroke-width="2"/>
+  
+  <!-- Silhouette / Creative Iconography -->
+  <circle cx="400" cy="320" r="130" fill="#111111"/>
+  <circle cx="400" cy="300" r="90" fill="#83E52B"/>
+  <path d="M 230 520 C 230 430, 570 430, 570 520 L 570 540 L 230 540 Z" fill="#FF5722"/>
+  
+  <!-- Tag / Label Bar -->
+  <rect x="120" y="580" width="560" height="70" fill="#111111"/>
+  <text x="400" y="625" fill="#FFFBEA" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle" letter-spacing="4">DEVELOPER / ARCHITECT</text>
+  
+  <!-- Editorial Notes -->
+  <text x="140" y="700" fill="#111111" font-family="sans-serif" font-size="18" font-weight="900" letter-spacing="1">PORTRAIT PLACEHOLDER</text>
+  <text x="140" y="735" fill="#555555" font-family="sans-serif" font-size="14">Replace with your high-res headshot or studio photograph</text>
+  <text x="140" y="765" fill="#555555" font-family="monospace" font-size="13">ASPECT RATIO 4:5 • RECOMMENDED 1200x1500PX</text>
+  
+  <!-- Corner geometric marks -->
+  <rect x="90" y="90" width="20" height="20" fill="#83E52B" stroke="#111111" stroke-width="2"/>
+  <rect x="690" y="90" width="20" height="20" fill="#FF5722" stroke="#111111" stroke-width="2"/>
+  <rect x="90" y="890" width="20" height="20" fill="#FF5722" stroke="#111111" stroke-width="2"/>
+  <rect x="690" y="890" width="20" height="20" fill="#83E52B" stroke="#111111" stroke-width="2"/>
+</svg>
+
