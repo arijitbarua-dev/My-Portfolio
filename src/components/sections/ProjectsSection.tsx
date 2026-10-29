@@ -20,9 +20,6 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
 
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <AnimatedReveal>
-            <SectionLabel variant="orange">
-              06. SELECTED WORK
-            </SectionLabel>
             <SectionHeading
               title="Ideas Made"
               italicWord="Real."
@@ -39,7 +36,13 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
         </div>
 
         {/* Responsive Editorial Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          className={
+            projects.length === 2
+              ? "grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto"
+              : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          }
+        >
           {projects.map((project, index) => (
             <AnimatedReveal key={project.slug || project._id} delay={index * 0.1}>
               <ProjectCard project={project} index={index} />

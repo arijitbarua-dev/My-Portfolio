@@ -121,139 +121,94 @@ export const defaultEducation: Education[] = [
 
 export const defaultProjects: Project[] = [
   {
-    title: "KRONOS // COMMERCE",
-    slug: "kronos-commerce",
-    subtitle: "High-Performance Modular Headless E-Commerce System",
+    title: "BAZARDOR",
+    slug: "bazardor",
+    subtitle: "Daily Commodity & Market Price Tracking Platform",
     description:
-      "[DEMO DATA - EXAMPLE PROJECT] A modern e-commerce application featuring dynamic inventory synchronization, multi-tier cart calculations, Stripe payments, and a bespoke brutalist design system.",
+      "A comprehensive daily commodity price tracking application designed to monitor essential bazaar item rates, market fluctuations, and commodity updates with responsive accessibility.",
     overview:
-      "Kronos was engineered to explore ultra-fast e-commerce shopping workflows without heavy third-party bloat. Built with Next.js App Router and MongoDB, it couples sub-second page transitions with robust transactional checkout reliability.",
+      "BazarDor provides a reliable, streamlined platform for consumers and sellers to track fluctuating market commodity prices. Built with modern web technologies, it delivers up-to-date pricing data, search and categorization, and transparent price records.",
     problem:
-      "Traditional online retail platforms often suffer from slow server-side response times, fragmented inventory state between client and backend, and visually interchangeable generic templates.",
+      "Daily commodity and grocery prices fluctuate constantly, making it difficult for everyday shoppers to stay informed and budget accurately across different market segments.",
     goals:
-      "Establish an editorial-driven shopping experience with instant client-side cart updates, secure checkout pipelines, and full inventory management backed by MongoDB transactions.",
+      "Deliver a fast, responsive, and intuitive web application providing daily updated prices for essential bazaar goods, category filtering, and clean accessibility across mobile and desktop devices.",
     features: [
-      "Optimistic cart state manipulation with server synchronization",
-      "Stripe payment gateway integration with webhook validation",
-      "Categorized catalog filtering with dynamic URL query reflection",
-      "Admin order dispatch dashboard and live inventory controls",
-      "Editorial product zoom gallery with high-res aspect framing",
+      "Daily commodity price updates and detailed catalog listings",
+      "Categorized filtering across essentials, vegetables, meat, and grocery items",
+      "Instant real-time search and item price lookups",
+      "Mobile-first responsive layout optimized for on-the-go price checks",
+      "Clean data presentation with clear units and price comparisons",
     ],
-    technologies: ["Next.js", "TypeScript", "MongoDB", "Mongoose", "Tailwind CSS", "Stripe API"],
-    category: "E-Commerce",
-    coverImage: "/images/project-kronos.svg",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    category: "Web Application",
+    coverImage: "/images/bazardor1.jpg",
     gallery: [
-      "/images/project-kronos-1.svg",
-      "/images/project-kronos-2.svg",
-      "/images/project-kronos-3.svg",
-      "/images/project-kronos-4.svg",
+      "/images/bazardor2.jpg",
+      "/images/bazardor3.jpg",
+      "/images/bazardor4.jpg",
+      "/images/bazardor5.jpg",
     ],
-    role: "Lead Full-Stack Architect & UI Designer",
+    role: "Full-Stack Developer & UI Designer",
     developmentProcess:
-      "Started with low-fidelity editorial wireframes in Figma, translated the design tokens into Tailwind CSS, implemented MongoDB schemas with compound indexes, and deployed edge-cached routes via Next.js.",
+      "Engineered the application starting from interface wireframing to responsive component development, integrating dynamic price updates, and deploying to Vercel for fast edge delivery.",
     challenges:
-      "Handling real-time race conditions when multiple users attempt to purchase low-stock inventory simultaneously.",
+      "Presenting dense commodity pricing data clearly on smaller mobile screens while maintaining high readability and fast loading speeds.",
     solutions:
-      "Implemented MongoDB atomic condition updates (`$inc` with stock guard checks) paired with idempotent payment webhook processors.",
+      "Structured modular card components with compact data badges, intuitive category filters, and edge caching for sub-second page loads.",
     lessonsLearned:
-      "Optimistic UI updates deliver significant perceived speed improvements, but server-side rollback guards must be ironclad.",
+      "Clean component hierarchy and deliberate typography significantly reduce cognitive load for users scanning frequent price updates.",
     futurePlans:
-      "Multi-currency automatic conversion and localized regional warehouse delivery routing.",
-    liveUrl: "https://example.com/demo-kronos",
-    githubUrl: "https://github.com/example/kronos-commerce",
+      "Historical price graph trends, multi-market comparison, and SMS/push price alert notifications.",
+    liveUrl: "https://bazar-dor-app-phi.vercel.app/",
+    githubUrl: "https://github.com/arijitbarua-dev/BazarDor",
     featured: true,
     published: true,
     displayOrder: 1,
   },
   {
-    title: "PULSE // TASK ENGINE",
-    slug: "pulse-task-engine",
-    subtitle: "Keyboard-First Asynchronous Project & Workflow Manager",
+    title: "FITLOG",
+    slug: "fitlog",
+    subtitle: "Workout Logging & Fitness Progression Platform",
     description:
-      "[DEMO DATA - EXAMPLE PROJECT] A high-velocity task management and productivity application designed for creative studios, incorporating real-time kanban boards and keyboard command palettes.",
+      "An intuitive fitness tracking and workout logging platform engineered to record exercises, monitor training routines, track progress over time, and help athletes stay consistent.",
     overview:
-      "Pulse delivers a zero-friction workflow manager for teams that prioritize keyboard velocity over complex nesting. Features interactive kanban columns, markdown note attachments, and automated state transitions.",
+      "FitLog delivers a friction-free workout tracking application tailored for fitness enthusiasts and athletes. It enables users to record sets, reps, and weights, monitor workout history, and maintain training consistency with clean visual feedback.",
     problem:
-      "Most enterprise task software is encumbered by slow UI re-renders, convoluted configuration menus, and poor offline resiliency.",
+      "Most generic workout apps are bloated with ads, complex paywalls, and slow input workflows that interrupt intense training sessions at the gym.",
     goals:
-      "Build a focused, editorial task cockpit that operates at 60 FPS, supports keyboard navigation shortcuts, and maintains state continuity across distributed collaborators.",
+      "Create an ultra-clean, fast-loading workout companion that lets users log exercises in seconds, review workout history, and stay motivated.",
     features: [
-      "Drag-and-drop Kanban workflow columns with optimistic positioning",
-      "Global command palette (Cmd+K) for instant item discovery and actions",
-      "Real-time update broadcast using event streams",
-      "Granular project tagging, priority flags, and time tracking logs",
-      "Comprehensive team audit history and revision snapshots",
+      "Fast workout logging with set, rep, and weight inputs",
+      "Exercise library with categorized movement tracking",
+      "Training history and milestone progression overview",
+      "Mobile-first responsive interface designed for gym sessions",
+      "Visual progress feedback and workout consistency tracking",
     ],
-    technologies: ["React", "Next.js", "Node.js", "Express.js", "MongoDB", "Framer Motion"],
-    category: "Productivity",
-    coverImage: "/images/project-pulse.svg",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    category: "Fitness & Health",
+    coverImage: "/images/fitlog1.jpg",
     gallery: [
-      "/images/project-pulse-1.svg",
-      "/images/project-pulse-2.svg",
-      "/images/project-pulse-3.svg",
-      "/images/project-pulse-4.svg",
+      "/images/fitlog2.jpg",
+      "/images/fitlog3.jpg",
+      "/images/fitlog4.jpg",
+      "/images/fitlog5.jpg",
     ],
-    role: "Full Stack Engineer",
+    role: "Frontend & Full-Stack Developer",
     developmentProcess:
-      "Architected the relational document references in MongoDB, built custom drag-drop primitives with Framer Motion, and engineered keyboard event traps for desktop-grade fluidity.",
+      "Designed a minimalist aesthetic optimized for gym environments, implemented component state management for active workout tracking, and deployed to Vercel.",
     challenges:
-      "Maintaining fluid 60fps animations during complex board re-order operations with dozens of nested tasks.",
+      "Designing an input workflow simple enough to use between sets without disrupting exercise momentum.",
     solutions:
-      "Separated UI position state from server persistence payloads, batching backend synchronization via debounced server mutations.",
+      "Utilized large touch targets, streamlined quick-increment controls, and persistent local caching to guarantee uninterrupted logging.",
     lessonsLearned:
-      "Prioritizing keyboard accessibility dramatically benefits power users and improves overall DOM semantic hygiene.",
+      "User experience in fitness applications depends entirely on minimal friction during physical exertion.",
     futurePlans:
-      "Offline sync via Service Worker IndexedDB cache and bi-directional GitHub Issue synchronization.",
-    liveUrl: "https://example.com/demo-pulse",
-    githubUrl: "https://github.com/example/pulse-task-engine",
+      "Custom workout routine templates, progress photo logs, and rest timer integration.",
+    liveUrl: "https://fit-log-iota-seven.vercel.app/",
+    githubUrl: "https://github.com/arijitbarua-dev/FitLog",
     featured: true,
     published: true,
     displayOrder: 2,
-  },
-  {
-    title: "SYNTAX // CREATIVE CMS",
-    slug: "syntax-creative-cms",
-    subtitle: "Editorial Content Platform & Visual Analytics Cockpit",
-    description:
-      "[DEMO DATA - EXAMPLE PROJECT] An editorial publishing platform and analytics dashboard built for independent writers, art directors, and design-led media studios.",
-    overview:
-      "Syntax reimagines web publishing by marrying magazine-grade typography with live content performance telemetry. Includes markdown live previewing, asset management, and reader engagement metrics.",
-    problem:
-      "Modern content platforms force creative publications into standardized rigid column formats that strip away editorial individuality.",
-    goals:
-      "Create a dynamic digital publication platform offering customizable typography grids, rich media framing, and private self-hosted content ownership.",
-    features: [
-      "Custom block-based editorial editor with live typography scaling",
-      "Reader heatmaps, scroll-depth analytics, and read-ratio tracking",
-      "Role-based editorial approval workflows and scheduled publishing",
-      "Automated Open Graph cover generation and dynamic social previews",
-      "Multi-tenant asset library with automated Sharp image optimization",
-    ],
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Sharp", "Lucide React"],
-    category: "Dashboard & CMS",
-    coverImage: "/images/project-syntax.svg",
-    gallery: [
-      "/images/project-syntax-1.svg",
-      "/images/project-syntax-2.svg",
-      "/images/project-syntax-3.svg",
-      "/images/project-syntax-4.svg",
-    ],
-    role: "Creator & System Architect",
-    developmentProcess:
-      "Conceptualized the visual language around Swiss and brutalist editorial traditions. Implemented custom Mongoose schemas with draft versioning, and built real-time SVG charting for the admin analytics cockpit.",
-    challenges:
-      "Dynamically computing reading time and generating server-rendered typography without layout shift.",
-    solutions:
-      "Pre-calculated content AST trees on save, pre-rendering typography metrics at build and edge-cache time.",
-    lessonsLearned:
-      "Editorial aesthetics and strict accessibility standards can coexist harmoniously with deliberate contrast and focus ring tokens.",
-    futurePlans:
-      "ActivityPub / Fediverse distribution protocol integration for decentralized publishing.",
-    liveUrl: "https://example.com/demo-syntax",
-    githubUrl: "https://github.com/example/syntax-creative-cms",
-    featured: true,
-    published: true,
-    displayOrder: 3,
   },
 ];
 
