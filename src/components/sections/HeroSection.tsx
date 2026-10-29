@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { ArrowDownRight, FileText, MapPin } from "lucide-react";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/ui/Icons";
+import { GithubIcon, LinkedinIcon, FacebookIcon } from "@/components/ui/Icons";
 import { Profile } from "@/types";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/ui/Button";
@@ -20,7 +20,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
   return (
     <section className="relative pt-8 pb-16 sm:pt-14 sm:pb-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Top Status Bar inspired by creative agency briefs */}
         <AnimatedReveal delay={0.05}>
           <div className="flex flex-wrap items-center justify-between gap-3 pb-6 border-b-2 border-[#111111] mb-8 sm:mb-12">
@@ -39,7 +39,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
 
         {/* Editorial Asymmetric Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-          
+
           {/* Left Column: Headlines & Editorial Copy (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             <AnimatedReveal delay={0.1}>
@@ -47,9 +47,6 @@ export function HeroSection({ profile }: HeroSectionProps) {
                 <SectionLabel variant="orange">
                   FULL STACK & CREATIVE DEV
                 </SectionLabel>
-                <span className="font-mono text-xs text-[#555555] font-bold">
-                  VOL. 2026
-                </span>
               </div>
             </AnimatedReveal>
 
@@ -103,7 +100,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
                 </span>
                 <div className="flex items-center gap-2">
                   <a
-                    href={profile.socialLinks?.find((s) => s.platform.toLowerCase().includes("git"))?.url || "https://github.com"}
+                    href="https://github.com/arijitbarua-dev"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 border-2 border-[#111111] bg-[#FFFBEA] shadow-brutal-sm hover-lift hover:bg-[#83E52B]"
@@ -112,7 +109,7 @@ export function HeroSection({ profile }: HeroSectionProps) {
                     <GithubIcon className="w-4 h-4 text-[#111111]" />
                   </a>
                   <a
-                    href={profile.socialLinks?.find((s) => s.platform.toLowerCase().includes("link"))?.url || "https://linkedin.com"}
+                    href="https://www.linkedin.com/in/arijit-barua-turza"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 border-2 border-[#111111] bg-[#FFFBEA] shadow-brutal-sm hover-lift hover:bg-[#FF5722]"
@@ -121,13 +118,13 @@ export function HeroSection({ profile }: HeroSectionProps) {
                     <LinkedinIcon className="w-4 h-4 text-[#111111]" />
                   </a>
                   <a
-                    href={profile.socialLinks?.find((s) => s.platform.toLowerCase().includes("twit"))?.url || "https://twitter.com"}
+                    href="https://www.facebook.com/arijit.barua.2024"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 border-2 border-[#111111] bg-[#FFFBEA] shadow-brutal-sm hover-lift hover:bg-[#83E52B]"
-                    aria-label="Twitter"
+                    aria-label="Facebook"
                   >
-                    <TwitterIcon className="w-4 h-4 text-[#111111]" />
+                    <FacebookIcon className="w-4 h-4 text-[#111111]" />
                   </a>
                 </div>
               </div>
@@ -139,16 +136,13 @@ export function HeroSection({ profile }: HeroSectionProps) {
             <AnimatedReveal delay={0.2} className="w-full max-w-md">
               {/* Framed Card inspired by Reference Screenshot 1 & 2 */}
               <div className="relative border-3 border-[#111111] bg-[#F5F3E9] shadow-brutal-lg">
-                
+
                 {/* Top Nav/Tab Header inside Portrait Frame */}
-                <div className="flex items-center justify-between border-b-2 border-[#111111] bg-[#FFFBEA] p-3">
+                <div className="flex items-center border-b-2 border-[#111111] bg-[#FFFBEA] p-3">
                   <div className="flex items-center gap-1.5">
                     <span className="w-3 h-3 rounded-full border border-black bg-[#FF5722]" />
                     <span className="w-3 h-3 rounded-full border border-black bg-[#83E52B]" />
                     <span className="w-3 h-3 rounded-full border border-black bg-[#111111]" />
-                  </div>
-                  <div className="font-mono text-xs font-bold uppercase tracking-wider text-[#111111]">
-                    PORTRAIT // SPEC 01
                   </div>
                 </div>
 
@@ -156,8 +150,8 @@ export function HeroSection({ profile }: HeroSectionProps) {
                 <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#EFECE0] p-4 flex items-center justify-center">
                   <div className="relative w-full h-full border-2 border-[#111111] overflow-hidden bg-white">
                     <Image
-                      src={profile.portrait || "/images/portrait-placeholder.svg"}
-                      alt={profile.name}
+                      src="/images/person.jpg"
+                      alt={profile.name || "Arijit Barua Turza"}
                       fill
                       priority
                       className="object-cover"
@@ -173,11 +167,6 @@ export function HeroSection({ profile }: HeroSectionProps) {
                     <div className="text-[#111111] mt-0.5">
                       Production engineer focused on scalable web apps.
                     </div>
-                  </div>
-
-                  {/* Corner Accent Badge */}
-                  <div className="absolute top-6 right-6 bg-[#83E52B] border-2 border-[#111111] px-2.5 py-1 shadow-brutal-sm font-mono text-[10px] font-bold uppercase">
-                    OPEN 2026
                   </div>
                 </div>
 

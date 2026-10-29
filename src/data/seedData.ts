@@ -10,16 +10,16 @@ export const defaultProfile: Profile = {
   about:
     "My programming journey began with a curiosity for how complex systems translate into intuitive interfaces. Over the years, I've developed deep proficiency across both frontend and backend technologies—specializing in React, Next.js, Node.js, and MongoDB.\n\nI believe in clean architecture, strong typing, deliberate design systems, and building digital products that balance technical rigor with bold visual personality. When I'm not writing code, I explore typography, system architecture, open-source tooling, and algorithmic design.",
   location: "Available Worldwide (Remote / Hybrid)",
-  portrait: "/images/portrait-placeholder.svg",
+  portrait: "/images/person.jpg",
   resumeUrl: "/resume.pdf",
   email: "contact@yourdomain.com",
   phone: "+1 (555) 019-2834",
   whatsapp: "+1 (555) 019-2834",
   availability: "Available for new projects & opportunities",
   socialLinks: [
-    { platform: "GitHub", url: "https://github.com", label: "github.com/profile" },
-    { platform: "LinkedIn", url: "https://linkedin.com", label: "linkedin.com/in/profile" },
-    { platform: "Twitter / X", url: "https://twitter.com", label: "@handle" },
+    { platform: "GitHub", url: "https://github.com/arijitbarua-dev", label: "github.com/arijitbarua-dev" },
+    { platform: "LinkedIn", url: "https://www.linkedin.com/in/arijit-barua-turza", label: "linkedin.com/in/arijit-barua-turza" },
+    { platform: "Facebook", url: "https://www.facebook.com/arijit.barua.2024", label: "facebook.com/arijit.barua.2024" },
   ],
 };
 

@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUp } from "lucide-react";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/ui/Icons";
+import { GithubIcon, LinkedinIcon, FacebookIcon } from "@/components/ui/Icons";
 import { Profile } from "@/types";
 
 interface FooterProps {
@@ -95,7 +95,7 @@ export function Footer({ profile }: FooterProps) {
             </div>
             <div className="flex items-center gap-2">
               <a
-                href={profile?.socialLinks?.find((s) => s.platform.toLowerCase().includes("git"))?.url || "https://github.com"}
+                href="https://github.com/arijitbarua-dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub profile"
@@ -104,7 +104,7 @@ export function Footer({ profile }: FooterProps) {
                 <GithubIcon className="w-4 h-4 text-[#111111]" />
               </a>
               <a
-                href={profile?.socialLinks?.find((s) => s.platform.toLowerCase().includes("link"))?.url || "https://linkedin.com"}
+                href="https://www.linkedin.com/in/arijit-barua-turza"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn profile"
@@ -113,13 +113,13 @@ export function Footer({ profile }: FooterProps) {
                 <LinkedinIcon className="w-4 h-4 text-[#111111]" />
               </a>
               <a
-                href={profile?.socialLinks?.find((s) => s.platform.toLowerCase().includes("twit"))?.url || "https://twitter.com"}
+                href="https://www.facebook.com/arijit.barua.2024"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Twitter profile"
+                aria-label="Facebook profile"
                 className="p-2 border-2 border-[#111111] bg-[#FFFBEA] shadow-brutal-sm hover-lift hover:bg-[#83E52B]"
               >
-                <TwitterIcon className="w-4 h-4 text-[#111111]" />
+                <FacebookIcon className="w-4 h-4 text-[#111111]" />
               </a>
             </div>
 

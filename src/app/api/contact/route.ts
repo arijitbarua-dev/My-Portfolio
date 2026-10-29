@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { contactSchema } from "@/lib/validations";
-import { connectDB } from "@/lib/mongodb";
-import { ContactMessageModel } from "@/models/ContactMessage";
 import { sendContactEmail } from "@/lib/email";
 
 // Simple in-memory rate limiter: IP -> Array of timestamps
@@ -53,32 +51,15 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: true, message: "Message received." });
     }
 
-    // 3. Persist to MongoDB
-    let dbSaved = false;
-    try {
-      await connectDB();
-      await ContactMessageModel.create({
-        name,
-        email,
-        subject,
-        message,
-        status: "new",
-      });
-      dbSaved = true;
-    } catch (dbErr) {
-      console.warn("Could not save message to MongoDB (offline/connecting):", dbErr);
-    }
-
-    // 4. Send Email Notification
+    // 3. Send Email Notification
     const emailResult = await sendContactEmail({ name, email, subject, message });
 
     return NextResponse.json({
       success: true,
-      dbSaved,
       emailSent: emailResult.sent,
       message: emailResult.sent
         ? "Your message has been delivered directly to my inbox."
-        : "Your message was recorded securely in the portfolio dispatch queue.",
+        : "Your message has been received.",
     });
   } catch (error: any) {
     console.error("Contact API error:", error);
