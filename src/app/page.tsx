@@ -1,4 +1,5 @@
 import React from "react";
+import { connection } from "next/server";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
@@ -17,6 +18,7 @@ import {
 } from "@/lib/data";
 
 export default async function HomePage() {
+  await connection();
   const [profile, skills, education, experience, projects] = await Promise.all([
     getProfile(),
     getSkills(),
@@ -27,7 +29,7 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#FFFBEA]">
-      <Navbar resumeUrl={profile.resumeUrl} />
+      <Navbar />
 
       <main className="flex-1">
         <HeroSection profile={profile} />

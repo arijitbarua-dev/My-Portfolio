@@ -1,7 +1,7 @@
 import { Profile, Skill, Education, Experience, Project } from "@/types";
 
 export const defaultProfile: Profile = {
-  name: "[Your Name]",
+  name: "Arijit Barua Turza",
   slug: "portfolio-owner",
   designation: "Full Stack Engineer & Creative Developer",
   headline: "CRAFTING HIGH-IMPACT WEB EXPERIENCES WITH ARCHITECTURAL PRECISION.",

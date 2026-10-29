@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { ArrowUp } from "lucide-react";
 import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/ui/Icons";
 import { Profile } from "@/types";
@@ -10,11 +12,7 @@ interface FooterProps {
 }
 
 export function Footer({ profile }: FooterProps) {
-  const [currentYear, setCurrentYear] = useState<number>(2026);
-
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-  }, []);
+  const currentYear = 2026;
 
   return (
     <footer className="mt-20 border-t-3 border-[#111111] bg-[#F5F3E9] text-[#111111] relative">
@@ -30,9 +28,18 @@ export function Footer({ profile }: FooterProps) {
           {/* Col 1: Brand & Tagline */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="px-3 py-1 bg-[#111111] text-[#FFFBEA] border-2 border-[#111111] font-heading text-lg font-black uppercase tracking-wider shadow-brutal-sm">
-                DEV // 2026
-              </div>
+              <Link
+                href="/"
+                className="group flex items-center border-2 border-[#111111] bg-[#111111] p-1 shadow-brutal-sm hover-lift overflow-hidden"
+              >
+                <Image
+                  src="/images/A.jpg"
+                  alt="Logo"
+                  width={48}
+                  height={36}
+                  className="h-8 w-auto object-contain block"
+                />
+              </Link>
               <span className="font-mono text-xs uppercase tracking-wider text-[#555555]">
                 {profile?.availability || "Available for Opportunities"}
               </span>
@@ -129,11 +136,7 @@ export function Footer({ profile }: FooterProps) {
         {/* Bottom Credits & Copyright */}
         <div className="mt-12 pt-6 border-t-2 border-[#111111] flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-[#555555]">
           <div>
-            © {currentYear} {profile?.name || "[Your Name]"}. All editorial rights reserved.
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="inline-block w-2 h-2 rounded-full bg-[#83E52B]" />
-            <span>Built with Next.js App Router, TypeScript & MongoDB</span>
+            © {currentYear} Arijit Barua Turza. All editorial rights reserved.
           </div>
         </div>
       </div>

@@ -64,7 +64,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
   return (
     <>
-      <Navbar resumeUrl={profile.resumeUrl} />
+      <Navbar />
 
       <main className="min-h-screen py-10 sm:py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
