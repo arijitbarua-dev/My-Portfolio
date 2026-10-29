@@ -24,9 +24,6 @@ export function AboutSection({ profile }: AboutSectionProps) {
           {/* Left Column: Heading and Narrative Bio (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             <AnimatedReveal>
-              <SectionLabel variant="orange">
-                02. THE PERSON
-              </SectionLabel>
               <SectionHeading
                 title="More Than Just"
                 italicWord="Code."
@@ -39,7 +36,7 @@ export function AboutSection({ profile }: AboutSectionProps) {
               <div className="prose prose-neutral max-w-none space-y-4 font-sans text-base sm:text-lg text-[#333333] leading-relaxed">
                 <p>
                   {profile.about.split("\n\n")[0] ||
-                    "My programming journey began with a curiosity for how complex systems translate into intuitive interfaces. Over the years, I've developed deep proficiency across both frontend and backend technologies—specializing in React, Next.js, Node.js, and MongoDB."}
+                    "My programming journey began with a curiosity for how complex systems translate into intuitive interfaces. Over the years, I've developed deep proficiency across both frontend and backend technologies—specializing in JavaScript, TypeScript, React, Next.js, Node.js, Express.js, MongoDB, and Python."}
                 </p>
                 <p>
                   {profile.about.split("\n\n")[1] ||
@@ -59,19 +56,27 @@ export function AboutSection({ profile }: AboutSectionProps) {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm font-sans font-medium">
                   <div className="flex items-center gap-2">
                     <DecorativeStar color="lime" size="sm" />
-                    <span>Architectural Resilience</span>
+                    <span>Clean & Maintainable Code</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <DecorativeStar color="orange" size="sm" />
-                    <span>Type-Safe By Default</span>
+                    <span>AI-Driven Development</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <DecorativeStar color="orange" size="sm" />
-                    <span>Deliberate Typography & UI</span>
+                    <span>Security by Design</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <DecorativeStar color="lime" size="sm" />
-                    <span>High-Throughput Backends</span>
+                    <span>Performance & Scalability</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <DecorativeStar color="lime" size="sm" />
+                    <span>Continuous Learning</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <DecorativeStar color="lime" size="sm" />
+                    <span>User-Centered Design</span>
                   </div>
                 </div>
               </div>
@@ -83,7 +88,7 @@ export function AboutSection({ profile }: AboutSectionProps) {
             <AnimatedReveal delay={0.2}>
               <EditorialCard
                 headerTag="PROFILE MATRIX"
-                headerNumber="02"
+                headerNumber="01"
                 variant="white"
                 shadow="lg"
                 innerClassName="p-6 sm:p-8"
