@@ -21,9 +21,6 @@ export function EducationSection({ education }: EducationSectionProps) {
 
         <div className="mb-12">
           <AnimatedReveal>
-            <SectionLabel variant="lime">
-              05. EDUCATION
-            </SectionLabel>
             <SectionHeading
               title="Where I"
               italicWord="Learned."

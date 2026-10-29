@@ -97,26 +97,26 @@ export const defaultExperience: Experience[] = [
 
 export const defaultEducation: Education[] = [
   {
-    qualification: "Bachelor of Science in Computer Science & Engineering",
-    institution: "[University / Institute Name Placeholder]",
+    qualification: "Undergraduate",
+    institution: "BRAC University",
     subject: "Computer Science & Software Systems",
-    startYear: 2018,
-    endYear: 2022,
-    grade: "First Class / High Distinction",
+    startYear: 2022,
+    endYear: 2026,
+    grade: "Active",
     description:
-      "Core coursework in Data Structures, Algorithms, Distributed Systems, Database Management Systems, Computer Networks, and Software Architecture.",
+      "Building a strong foundation in software engineering, data structures, algorithms, databases, and computer networks while exploring full-stack web development, AI integration, and scalable application design through hands-on projects.",
     displayOrder: 1,
   },
-  {
-    qualification: "Advanced Web Engineering Certification",
-    institution: "[Specialized Technical Academy Placeholder]",
-    subject: "Modern Full-Stack Systems & Cloud Deployment",
-    startYear: 2022,
-    endYear: 2023,
-    description:
-      "Focused practical research in real-time socket architectures, microservices containerization, and modern App Router patterns.",
-    displayOrder: 2,
-  },
+  // {
+  //   qualification: "Advanced Web Engineering Certification",
+  //   institution: "[Specialized Technical Academy Placeholder]",
+  //   subject: "Modern Full-Stack Systems & Cloud Deployment",
+  //   startYear: 2022,
+  //   endYear: 2023,
+  //   description:
+  //     "Focused practical research in real-time socket architectures, microservices containerization, and modern App Router patterns.",
+  //   displayOrder: 2,
+  // },
 ];
 
 export const defaultProjects: Project[] = [
