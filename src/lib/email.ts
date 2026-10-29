@@ -12,7 +12,7 @@ export async function sendContactEmail({ name, email, subject, message }: EmailP
   const port = Number(process.env.EMAIL_PORT) || 587;
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASSWORD;
-  const recipient = process.env.CONTACT_EMAIL || user;
+  const recipient = process.env.CONTACT_EMAIL || user || "arijit.barua.turza@g.bracu.ac.bd";
 
   // Check if SMTP is configured
   if (!host || !user || !pass || !recipient) {

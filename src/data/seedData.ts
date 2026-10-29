@@ -12,9 +12,9 @@ export const defaultProfile: Profile = {
   location: "Available Worldwide (Remote / Hybrid)",
   portrait: "/images/person.jpg",
   resumeUrl: "/resume.pdf",
-  email: "contact@yourdomain.com",
-  phone: "+1 (555) 019-2834",
-  whatsapp: "+1 (555) 019-2834",
+  email: "arijit.barua.turza@g.bracu.ac.bd",
+  phone: "+88 01601712244",
+  whatsapp: "+88 01601712244",
   availability: "Available for new projects & opportunities",
   socialLinks: [
     { platform: "GitHub", url: "https://github.com/arijitbarua-dev", label: "github.com/arijitbarua-dev" },

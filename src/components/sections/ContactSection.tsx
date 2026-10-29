@@ -79,9 +79,6 @@ export function ContactSection({ profile }: ContactSectionProps) {
           {/* Left Column: Direct Inquiries & Meta (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <AnimatedReveal>
-              <SectionLabel variant="lime">
-                07. LET'S CONNECT
-              </SectionLabel>
               <SectionHeading
                 title="Have a Good"
                 italicWord="Project?"
@@ -99,14 +96,14 @@ export function ContactSection({ profile }: ContactSectionProps) {
 
                 <div className="space-y-3 font-mono text-sm">
                   {/* Email */}
-                  <div className="flex items-center justify-between p-2.5 bg-[#FFFBEA] border-2 border-[#111111]">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 p-2.5 bg-[#FFFBEA] border-2 border-[#111111]">
                     <div className="flex items-center gap-2">
-                      <Mail className="w-4 h-4 text-[#FF5722]" />
+                      <Mail className="w-4 h-4 text-[#FF5722] shrink-0" />
                       <span className="text-xs uppercase font-bold text-[#555555]">EMAIL:</span>
                     </div>
                     <a
                       href={`mailto:${profile.email}`}
-                      className="text-xs font-bold text-[#111111] hover:text-[#FF5722] truncate max-w-[200px]"
+                      className="text-xs font-bold text-[#111111] hover:text-[#FF5722] transition-colors break-all sm:text-right"
                     >
                       {profile.email}
                     </a>
@@ -119,7 +116,12 @@ export function ContactSection({ profile }: ContactSectionProps) {
                         <Phone className="w-4 h-4 text-[#83E52B]" />
                         <span className="text-xs uppercase font-bold text-[#555555]">PHONE:</span>
                       </div>
-                      <span className="text-xs font-bold text-[#111111]">{profile.phone}</span>
+                      <a
+                        href={`tel:${profile.phone.replace(/[^0-9+]/g, "")}`}
+                        className="text-xs font-bold text-[#111111] hover:text-[#83E52B] transition-colors"
+                      >
+                        {profile.phone}
+                      </a>
                     </div>
                   )}
 
@@ -134,7 +136,7 @@ export function ContactSection({ profile }: ContactSectionProps) {
                         href={`https://wa.me/${profile.whatsapp.replace(/[^0-9]/g, "")}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs font-bold text-[#111111] hover:text-[#83E52B]"
+                        className="text-xs font-bold text-[#111111] hover:text-[#83E52B] transition-colors"
                       >
                         {profile.whatsapp}
                       </a>
