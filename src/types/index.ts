@@ -26,8 +26,9 @@ export interface Profile {
 export interface Skill {
   _id?: string;
   name: string;
-  category: "Frontend" | "Backend" | "Database" | "Tools and Workflow" | string;
-  icon: string;
+  category: "Frontend" | "Backend" | "Database" | "Tools" | "Workflow" | string;
+  icon?: string;
+  image?: string;
   proficiency?: number;
   displayOrder: number;
 }

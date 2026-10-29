@@ -24,33 +24,37 @@ export const defaultProfile: Profile = {
 };
 
 export const defaultSkills: Skill[] = [
-  // Frontend
-  { name: "TypeScript", category: "Frontend", icon: "Code2", displayOrder: 1 },
-  { name: "React", category: "Frontend", icon: "Boxes", displayOrder: 2 },
-  { name: "Next.js", category: "Frontend", icon: "Layers", displayOrder: 3 },
-  { name: "Tailwind CSS", category: "Frontend", icon: "Palette", displayOrder: 4 },
-  { name: "JavaScript", category: "Frontend", icon: "FileCode", displayOrder: 5 },
-  { name: "HTML5 / CSS3", category: "Frontend", icon: "Layout", displayOrder: 6 },
-  
-  // Backend
-  { name: "Node.js", category: "Backend", icon: "Server", displayOrder: 7 },
-  { name: "Express.js", category: "Backend", icon: "Cpu", displayOrder: 8 },
-  { name: "REST APIs", category: "Backend", icon: "Network", displayOrder: 9 },
-  { name: "Server-side Dev", category: "Backend", icon: "HardDrive", displayOrder: 10 },
-  { name: "Authentication", category: "Backend", icon: "ShieldCheck", displayOrder: 11 },
+  // 1. Frontend
+  { name: "HTML5", category: "Frontend", icon: "Layout", image: "/images/html5.jpg", displayOrder: 1 },
+  { name: "CSS3", category: "Frontend", icon: "Palette", image: "/images/css3.jpg", displayOrder: 2 },
+  { name: "JavaScript", category: "Frontend", icon: "FileCode", image: "/images/javascript.jpg", displayOrder: 3 },
+  { name: "TypeScript", category: "Frontend", icon: "Code2", image: "/images/typescript.jpg", displayOrder: 4 },
+  { name: "React", category: "Frontend", icon: "Boxes", image: "/images/react.jpg", displayOrder: 5 },
+  { name: "Next.js", category: "Frontend", icon: "Layers", displayOrder: 6 },
+  { name: "Tailwind CSS", category: "Frontend", icon: "Palette", image: "/images/tailwind-css.jpg", displayOrder: 7 },
 
-  // Database
+  // 2. Backend
+  { name: "Node.js", category: "Backend", icon: "Server", image: "/images/node-js.jpg", displayOrder: 8 },
+  { name: "Express.js", category: "Backend", icon: "Cpu", image: "/images/server.jpg", displayOrder: 9 },
+  { name: "Python", category: "Backend", icon: "Terminal", image: "/images/python.jpg", displayOrder: 10 },
+  { name: "REST APIs", category: "Backend", icon: "Network", displayOrder: 11 },
+
+  // 3. Database
   { name: "MongoDB", category: "Database", icon: "Database", displayOrder: 12 },
-  { name: "Mongoose", category: "Database", icon: "Binary", displayOrder: 13 },
-  { name: "PostgreSQL / SQL", category: "Database", icon: "Table2", displayOrder: 14 },
 
-  // Tools & Workflow
-  { name: "Git & GitHub", category: "Tools and Workflow", icon: "GitBranch", displayOrder: 15 },
-  { name: "Docker", category: "Tools and Workflow", icon: "Container", displayOrder: 16 },
-  { name: "VS Code", category: "Tools and Workflow", icon: "Terminal", displayOrder: 17 },
-  { name: "Postman", category: "Tools and Workflow", icon: "Send", displayOrder: 18 },
-  { name: "Figma", category: "Tools and Workflow", icon: "Figma", displayOrder: 19 },
-  { name: "Vercel", category: "Tools and Workflow", icon: "CloudUpload", displayOrder: 20 },
+  // 4. Tools
+  { name: "VS Code", category: "Tools", icon: "Terminal", displayOrder: 13 },
+  { name: "Git", category: "Tools", icon: "GitBranch", image: "/images/git.jpg", displayOrder: 14 },
+  { name: "GitHub", category: "Tools", icon: "Github", image: "/images/github.jpg", displayOrder: 15 },
+  { name: "npm", category: "Tools", icon: "Boxes", image: "/images/npm.jpg", displayOrder: 16 },
+
+  // 5. Workflow
+  { name: "Responsive Design", category: "Workflow", icon: "Layout", displayOrder: 17 },
+  { name: "Component-Based Development", category: "Workflow", icon: "Boxes", image: "/images/component-based-development.jpg", displayOrder: 18 },
+  { name: "RESTful API Integration", category: "Workflow", icon: "Network", displayOrder: 19 },
+  { name: "Version Control", category: "Workflow", icon: "GitBranch", displayOrder: 20 },
+  { name: "Debugging", category: "Workflow", icon: "Terminal", image: "/images/debug.jpg", displayOrder: 21 },
+  { name: "AI-Assisted Development", category: "Workflow", icon: "Cpu", displayOrder: 22 },
 ];
 
 export const defaultExperience: Experience[] = [

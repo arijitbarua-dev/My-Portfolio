@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Skill } from "@/types";
-import { SectionLabel } from "@/components/ui/SectionLabel";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
@@ -26,8 +26,11 @@ import {
   Terminal,
   Send,
   CloudUpload,
+  Smartphone,
+  Sparkles,
+  Bug,
 } from "lucide-react";
-import { FigmaIcon } from "@/components/ui/Icons";
+import { GithubIcon, FigmaIcon } from "@/components/ui/Icons";
 
 interface SkillsSectionProps {
   skills: Skill[];
@@ -52,14 +55,18 @@ const iconMap: Record<string, React.ReactNode> = {
   Container: <Container className="w-5 h-5" />,
   Terminal: <Terminal className="w-5 h-5" />,
   Send: <Send className="w-5 h-5" />,
+  Github: <GithubIcon className="w-5 h-5" />,
   Figma: <FigmaIcon className="w-5 h-5" />,
   CloudUpload: <CloudUpload className="w-5 h-5" />,
+  Smartphone: <Smartphone className="w-5 h-5" />,
+  Sparkles: <Sparkles className="w-5 h-5" />,
+  Bug: <Bug className="w-5 h-5" />,
 };
 
 export function SkillsSection({ skills }: SkillsSectionProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
-  const categories = ["All", "Frontend", "Backend", "Database", "Tools and Workflow"];
+  const categories = ["All", "Frontend", "Backend", "Database", "Tools", "Workflow"];
 
   const filteredSkills =
     selectedCategory === "All"
@@ -75,9 +82,6 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
 
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <AnimatedReveal>
-            <SectionLabel variant="lime">
-              03. MY TOOLKIT
-            </SectionLabel>
             <SectionHeading
               title="Tools of the"
               italicWord="Trade."
@@ -86,7 +90,7 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
             />
           </AnimatedReveal>
 
-          {/* Category Filter Pills (Inspired by Reference Pill Navs) */}
+          {/* Category Filter Pills */}
           <AnimatedReveal delay={0.1}>
             <div className="flex flex-wrap items-center gap-1.5 p-1 bg-[#F5F3E9] border-2 border-[#111111] shadow-brutal-sm rounded-full">
               {categories.map((cat) => {
@@ -112,24 +116,36 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
         {/* Skills Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {filteredSkills.map((skill, index) => {
-            const icon = iconMap[skill.icon] || <Code2 className="w-5 h-5" />;
+            const icon = (skill.icon && iconMap[skill.icon]) || <Code2 className="w-5 h-5" />;
 
             return (
-              <AnimatedReveal key={skill.name} delay={index * 0.03}>
-                <div className="group relative border-2 border-[#111111] bg-[#FFFFFF] p-4 shadow-brutal-sm hover-lift flex flex-col justify-between h-full min-h-[120px]">
-                  {/* Top Bar with Icon & Category indicator */}
-                  <div className="flex items-center justify-between pb-2 border-b border-[#111111]/15">
-                    <div className="p-2 border border-[#111111] bg-[#FFFBEA] text-[#111111] group-hover:bg-[#FF5722] group-hover:text-black transition-colors">
-                      {icon}
+              <AnimatedReveal key={skill.name} delay={index * 0.02}>
+                <div className="group relative border-2 border-[#111111] bg-[#FFFFFF] p-4 shadow-brutal-sm hover-lift flex flex-col justify-between h-full min-h-[136px]">
+                  {/* Top Bar with Image Thumbnail or Icon & Category indicator */}
+                  <div className="flex items-center justify-between pb-3 border-b border-[#111111]/15">
+                    <div className="w-12 h-12 border-2 border-[#111111] bg-[#FFFBEA] flex items-center justify-center overflow-hidden shadow-brutal-xs relative">
+                      {skill.image ? (
+                        <Image
+                          src={skill.image}
+                          alt={skill.name}
+                          width={48}
+                          height={48}
+                          className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-200"
+                        />
+                      ) : (
+                        <div className="p-2 text-[#111111] group-hover:text-[#FF5722] transition-colors">
+                          {icon}
+                        </div>
+                      )}
                     </div>
-                    <span className="font-mono text-[9px] uppercase font-bold tracking-wider text-[#555555]">
-                      {skill.category.split(" ")[0]}
+                    <span className="font-mono text-[9px] uppercase font-bold tracking-wider text-[#555555] bg-[#F5F3E9] px-2 py-0.5 border border-[#111111]/20">
+                      {skill.category}
                     </span>
                   </div>
 
                   {/* Skill Name */}
                   <div className="mt-3">
-                    <h3 className="font-heading text-sm uppercase tracking-tight text-[#111111] group-hover:text-[#FF5722] transition-colors">
+                    <h3 className="font-heading text-sm uppercase tracking-tight text-[#111111] group-hover:text-[#FF5722] transition-colors leading-snug">
                       {skill.name}
                     </h3>
                   </div>
