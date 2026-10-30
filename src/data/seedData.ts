@@ -210,5 +210,60 @@ export const defaultProjects: Project[] = [
     published: true,
     displayOrder: 2,
   },
+  {
+    title: "WANDERLUST",
+    slug: "wanderlust",
+    subtitle: "Full-Stack Travel Exploration & Destination Booking Platform",
+    description:
+      "A modern travel booking and destination discovery platform offering curated itineraries, real-time travel search, trip reservations, and comprehensive destination management.",
+    overview:
+      "WANDERLUST is an end-to-end travel exploration and booking web platform that connects travelers with curated destinations worldwide. Built with Next.js 16, React 19, Express 5, and MongoDB, the system features dynamic search filtering, user authentication, reservation management, and full administrative destination CRUD workflows.",
+    problem:
+      "Travel discovery and booking platforms are frequently cluttered with confusing navigation, opaque pricing, and fragmented booking processes that make vacation planning overwhelming and tedious.",
+    goals:
+      "Build an ultra-responsive, visually captivating travel portal that empowers users to explore world-class destinations, filter trips effortlessly by budget and group size, manage personal bookings, and administer listings with secure controls.",
+    features: [
+      "Curated destination showcase with high-resolution imagery and itinerary insights",
+      "Multi-criteria travel search filtering by location, duration, budget, and group size",
+      "End-to-end trip booking workflow with personal reservation tracking under My Bookings",
+      "Secure authentication and session management powered by JWT and JOSE tokens",
+      "Full CRUD destination administration with interactive modal editing and deletion",
+      "Responsive mobile-first layout with smooth transitions, modern typography, and Base UI primitives",
+    ],
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Vercel",
+    ],
+    category: "Travel & Hospitality",
+    coverImage: "/images/wanderlust1.jpg",
+    gallery: [
+      "/images/wanderlust2.jpg",
+      "/images/wanderlust3.jpg",
+      "/images/wanderlust4.jpg",
+      "/images/wanderlust5.jpg",
+    ],
+    role: "Full-Stack Developer & UI Architect",
+    developmentProcess:
+      "Architected the full-stack system separating the client (Next.js 16 App Router, React 19, Tailwind CSS v4, Base UI) and server (Express 5 REST API, MongoDB native driver, JOSE token validation). Designed intuitive user flows for browsing destinations, booking trips, and managing listings before deploying both tiers to Vercel.",
+    challenges:
+      "Ensuring seamless coordination between the Next.js client-side state and Express REST endpoints, alongside maintaining responsive grid layouts with rich destination media without degrading page load speeds.",
+    solutions:
+      "Engineered modular React components with optimized image delivery, clean async data fetching patterns, and resilient REST API routes with secure token-based authorization and schema validations.",
+    lessonsLearned:
+      "Building a travel platform highlights how critical typography, visual hierarchy, and frictionless booking feedback loops are in keeping travelers engaged and confident in their choices.",
+    futurePlans:
+      "Interactive map integration, integrated payment gateway processing, real-time destination weather forecasts, and community user review systems.",
+    liveUrl: "https://wanderlust-ten-dun.vercel.app/",
+    githubUrl: "https://github.com/arijitbarua-dev/WANDERLUST",
+    featured: true,
+    published: true,
+    displayOrder: 3,
+  },
 ];
 

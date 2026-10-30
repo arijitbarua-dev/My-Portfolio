@@ -29,11 +29,15 @@ export async function getExperience(): Promise<Experience[]> {
 }
 
 export async function getPublishedProjects(): Promise<Project[]> {
-  return defaultProjects.filter((p) => p.published);
+  return defaultProjects
+    .filter((p) => p.published)
+    .sort((a, b) => a.displayOrder - b.displayOrder);
 }
 
 export async function getFeaturedProjects(): Promise<Project[]> {
-  return defaultProjects.filter((p) => p.published && p.featured);
+  return defaultProjects
+    .filter((p) => p.published && p.featured)
+    .sort((a, b) => a.displayOrder - b.displayOrder);
 }
 
 export async function getProjectBySlug(slug: string): Promise<Project | null> {
